@@ -2,14 +2,14 @@
 	"layout": "landing",
 	"sections": {
 		"header": {
-			"type": "chatnoir_header"
+			"type": "chatnoir-header"
 		},
 		"main": {
-			"type": "chatnoir_main",
+			"type": "chatnoir-main",
 			"settings": {}
 		},
 		"footer": {
-			"type": "chatnoir_footer"
+			"type": "chatnoir-footer"
 		}
 	},
 	"order": ["header", "main", "footer"]
