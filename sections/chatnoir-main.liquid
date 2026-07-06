@@ -1,13 +1,45 @@
 {{ 'landing-chatnoir.css' | asset_url | stylesheet_tag }}
-Hello world!
+<style>
+  .hero {
+    --hero-bg-image: url({{ 'hero-bg-img.jpg' | asset_url }});
+    --hero-bg-mobile: url({{ 'hero-bg-mobile.jpg' | asset_url }});
+  }
+</style>
+
+<section class="hero">
+	<div class="container">
+		<div class="hero__content">
+			<div class="hero__head">
+				<div class="overline">HANDCRAFTED LEATHER GOODS</div>
+				<h1 class="heading heading_a">Inspired by the Elegance of Cats</h1>
+			</div>
+			<div class="hero__subhead">A statement backpack handcrafted from premium full-grain leather. Designed for those who appreciate individuality, craftsmanship, and timeless style.</div>
+			<div class="cta-block">
+				<div class="cta-block__btn cta-btn">Request a Custom Piece</div>
+				<div class="cta-block__subline cta-subline">Made to order · Premium leather · Worldwide delivery</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="cn-main__section section-2"></section>
+<section class="cn-main__section section-2"></section>
+<section class="cn-main__section section-3"></section>
+<section class="cn-main__section section-2"></section>
+<section class="cn-main__section section-2"></section>
+<section class="cn-main__section section-1 section-1_wide"></section>
+<section class="cn-main__section section-1 section-1_narrow"></section>
+<section class="cn-main__section section-3"></section>
+<section class="cn-main__section section-1 section-1_narrow"></section>
+<section class="cn-main__section section-1 section-1_wide"></section>
+<section class="cn-main__section section-1 section-1_narrow"></section>
 
 {% schema %}
 {
 	"name": "Chat Noir Main",
-	"class": "cn-main",
+	"class": "main",
 	"limit": 1,
 	"settings": [
 		
-		]
+	]
 }
 {% endschema %}

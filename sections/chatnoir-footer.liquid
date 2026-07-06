@@ -1,13 +1,53 @@
+{% render 'font-face' %}
 {{ 'landing-chatnoir.css' | asset_url | stylesheet_tag }}
+{% render 'icon-sprite' %}
+
+<div class="container">
+	<div class="footer-content">
+		<div class="footer-row footer-row_first">
+			<div class="footer__info footer-info">
+				<div class="footer-info__logo">
+					{% render 'chatnoir-logo', class: 'logo-img' %}
+				</div>
+				<div class="footer-info__text">Handcrafted leather goods inspired by elegance, individuality, and timeless craftsmanship.</div>
+			</div>
+			<div class="footer__social">
+				<ul class="social-btn">
+					<li class="social-btn__item">
+						<a href="#" class="social-btn__link">
+							{% render 'icon', icon: 'instagram' %}
+						</a>
+					</li>
+					<li class="social-btn__item">
+						<a href="#" class="social-btn__link">
+							{% render 'icon', icon: 'facebook' %}
+						</a>
+					</li>
+					<li class="social-btn__item">
+						<a href="#" class="social-btn__link">
+							{% render 'icon', icon: 'pinterest' %}
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-row">
+			<div class="footer__copyright">
+				© 2026 Chat Noir Atelier. All rights reserved.
+			</div>
+		</div>
+	</div>
+</div>
+
 
 {% schema %}
 {
 	"name": "Chat Noir Footer",
 	"tag": "footer",
-	"class": "cn-footer",
+	"class": "footer",
 	"limit": 1,
 	"settings": [
 		
-		]
+	]
 }
 {% endschema %}

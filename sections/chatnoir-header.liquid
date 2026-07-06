@@ -1,10 +1,26 @@
+{% render 'font-face' %}
 {{ 'landing-chatnoir.css' | asset_url | stylesheet_tag }}
+{% render 'icon-sprite' %}
+
+<div class="container">
+	<div class="header-content">
+		<div class="header-logo">
+			{% render 'chatnoir-logo', class: 'logo-img' %}
+		</div>
+		<div class="top-menu">
+			<div class="top-menu__button menu-open-btn">
+				{% render 'icon', icon: 'burger' %}
+			</div>
+			{% render 'main-menu', class: 'desktop' %}
+		</div>
+	</div>
+</div>
 
 {% schema %}
 {
 	"name": "Chat Noir Header",
 	"tag": "header",
-	"class": "cn-header",
+	"class": "header",
 	"limit": 1,
 	"settings": [
 		
