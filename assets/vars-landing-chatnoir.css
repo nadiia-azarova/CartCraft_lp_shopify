@@ -1,0 +1,55 @@
+@scope (.landing-chatnoir) {
+	:scope {
+		/* root colors */
+		--off-black-900: #3b3731;
+		--off-black-800: #555046;
+		--off-black-700: #70695c;
+
+		--warm-milk: #f7f3ec;
+		--white-linen: #f4efe6;
+		--natural-linen: #ede5d8;
+		--dark-linen-500: #ddd2bf;
+		--dark-linen-600: #bab0a0;
+		--dark-linen-700: #968f82;
+
+		--cognac-500: #9a463d;
+		--cognac-600: #813b33;
+
+		/* alias colors */
+		--text-color: var(--off-black-900);
+		--surface-color: var(--warm-milk);
+		--btn-color: var(--white-linen);
+
+		/* grid */
+		--grid-gap: 24px;
+
+		/* gaps & paddings */
+		--gap-xs: 4px;
+		--gap-sm: clamp(0.25rem, 0.125rem + 0.417vw, 0.5rem); /* 8–4 px */
+		--gap-md: clamp(0.5rem, 0.25rem + 0.833vw, 1rem); /* 16–8 px */
+		--gap-lg: 20px;
+		--gap-xl: 24px;
+		--gap-xxl: clamp(1rem, 0rem + 3.3333vw, 3rem); /* 48–16 px */
+
+		/* font sizes */
+		--fs-h1: clamp(2.925rem, 1.125rem + 3.75vw, 4.5rem);
+		--fs-xl: clamp(1.5rem, 1.25rem + 0.8333vw, 2rem); /* 32–24 px */
+		--fs-lg: clamp(1rem, 0.875rem + 0.4167vw, 1.25rem); /* 20–16 px */
+		--fs-md: clamp(0.875rem, 0.8125rem + 0.2083vw, 1rem); /* 16–14 px */
+		--fs-sm: clamp(0.75rem, 0.6875rem + 0.2083vw, 0.875rem); /* 14–12 px */
+		--fs-xs: clamp(0.625rem, 0.5625rem + 0.2083vw, 0.75rem); /* 12–10 px */
+
+		/* font families */
+		--font-body: 'Neue Montreal';
+		--font-head: 'Canela Deck Trial';
+
+		/* element sizes */
+		--social-icon-size: 40px;
+		--header-size: 60px;
+		--border-sm: 8px;
+		--max-width: 888px;
+
+		/* transition */
+		--transition: 250ms ease-in-out;
+	}
+}

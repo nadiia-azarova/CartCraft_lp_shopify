@@ -1,12 +1,18 @@
-{{ 'landing-chatnoir.css' | asset_url | stylesheet_tag }}
 <style>
-  .hero {
-    --hero-bg-image: url({{ 'hero-bg-img.jpg' | asset_url }});
-    --hero-bg-mobile: url({{ 'hero-bg-mobile.jpg' | asset_url }});
-  }
+	:root {
+		--hero-bg-image: url({{ 'hero-bg-img.jpg' | asset_url }});
+		--hero-bg-mobile: url({{ 'hero-bg-mobile.jpg' | asset_url }});
+		--icon-star: url({{ 'icon-star.svg' |  asset_url }});
+		--features-bg: url({{ 'features-bg.png' |  asset_url }});
+		--features-vertical-bg: url({{ 'features-vertical.png' |  asset_url }});
+		--photo-cta: url({{ 'photo-cta-bg.png' |  asset_url }});
+	}
+  
 </style>
 
-<section class="hero">
+<!-- Hero Section -->
+
+<section class="main__section hero">
 	<div class="container">
 		<div class="hero__content">
 			<div class="hero__head">
@@ -21,17 +27,281 @@
 		</div>
 	</div>
 </section>
-<section class="cn-main__section section-2"></section>
-<section class="cn-main__section section-2"></section>
-<section class="cn-main__section section-3"></section>
-<section class="cn-main__section section-2"></section>
-<section class="cn-main__section section-2"></section>
-<section class="cn-main__section section-1 section-1_wide"></section>
-<section class="cn-main__section section-1 section-1_narrow"></section>
-<section class="cn-main__section section-3"></section>
-<section class="cn-main__section section-1 section-1_narrow"></section>
-<section class="cn-main__section section-1 section-1_wide"></section>
-<section class="cn-main__section section-1 section-1_narrow"></section>
+
+<!-- Double Section: Bastet Backpack -->
+
+<section class="main__section double-col double-col_odd">
+	<div class="container">
+		<div class="double-col__content">
+			<div class="double-col__col square square_img">
+				<img class="square__img" src="{{ 'backpack-01.png' | asset_url }}" width="2048" height="2048" alt="Woman wearing a handcrafted cognac leather cat backpack">
+			</div>
+			<div class="double-col__col square square_txt">
+				<h2 class="square__heading heading heading_b">The Bastet Backpack</h2>
+				<p>More than an accessory, The Bastet Backpack is a celebration of personality and craftsmanship. Inspired by the graceful silhouette of a cat, each piece is handcrafted using carefully selected full-grain leather and finished by hand.</p>
+				<p>Built to accompany you for years, it develops a unique patina that tells your story with every journey.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Double Section: Craft -->
+
+<section class="main__section double-col double-col_even">
+	<div class="container">
+		<div class="double-col__content">
+			<div class="double-col__col square square_img">
+				<img class="square__img" src="{{ 'backpack-02.png' | asset_url }}" width="2048" height="2048" alt="Craftsperson hand-cutting full-grain leather for a handcrafted backpack">
+			</div>
+			<div class="double-col__col square square_txt">
+				<h2 class="square__heading heading heading_b">Made by Hand. Made to Last.</h2>
+				<p>Every Chat Noir Atelier piece is created individually rather than mass-produced.</p>
+				<p>From cutting and shaping the leather to hand-finishing every detail, our process prioritizes quality over speed. We believe true luxury comes from craftsmanship, attention to detail, and products designed to age beautifully.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Features Section -->
+
+<section class="main__section features">
+	<div class="container">
+		<div class="features__content">
+			<h2 class="features__h2 heading heading_b">Designed for Those Who Appreciate Craft</h2>
+			<ul class="features__list">
+				<li class="features__item">
+					<h3 class="features__heading heading heading_c">Premium Full-Grain Leather</h3>
+					<p class="features__txt">Carefully selected for its rich texture, natural character, and exceptional durability that only improves with age.</p>
+				</li>
+				<li class="features__item">
+					<h3 class="features__heading heading heading_c">Handcrafted Construction</h3>
+					<p class="features__txt">Each backpack is individually assembled and finished by hand using traditional leatherworking techniques.</p>
+				</li>
+				<li class="features__item">
+					<h3 class="features__heading heading heading_c">Made for You</h3>
+					<p class="features__txt">Crafted to order and personalized to your preferences, creating a piece that is uniquely yours.</p>
+				</li>
+			</ul>
+			<ul class="features__controls controls-list">
+				<li class="controls-list__item controls-list__item_current">
+					<div class="controls-list__control"></div>
+				</li>
+				<li class="controls-list__item">
+					<div class="controls-list__control"></div>
+				</li>
+				<li class="controls-list__item">
+					<div class="controls-list__control"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Double Section: Customization -->
+
+<section class="main__section double-col double-col_odd">
+	<div class="container">
+		<div class="double-col__content">
+			<div class="double-col__col square square_img">
+				<img class="square__img" src="{{ 'backpack-03.png' | asset_url }}" width="2048" height="2048" alt="Two handcrafted leather Bastet backpacks with different embossed designs and finishes">
+			</div>
+			<div class="double-col__col square square_txt">
+				<h2 class="square__heading heading heading_b">Made Uniquely Yours</h2>
+				<p>Luxury is personal. Customize your backpack to reflect your individual style and story.</p>
+				<ul class="text-ul">
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Three Sizes Available</h3>
+						<p class="text-ul__p">Select from Small, Medium, or Large to find the perfect balance of style, comfort, and functionality.</p>
+					</li>
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Personal Embossing</h3>
+						<p class="text-ul__p">Add initials, a meaningful date, or a custom inscription.</p>
+					</li>
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Signature Details</h3>
+						<p class="text-ul__p">Select hardware finishes and finishing touches to create a truly unique piece.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Double Section: Colors -->
+
+<section class="main__section double-col double-col_even">
+	<div class="container">
+		<div class="double-col__content">
+			<div class="double-col__col square square_img">
+				<img class="square__img" src="{{ 'backpack-04.png' | asset_url }}" width="2048" height="2048" alt="Forest green leather cat backpack with adjustable shoulder straps">
+			</div>
+			<div class="double-col__col square square_txt">
+				<h2 class="square__heading heading heading_b">Available in Your Favorite Shade</h2>
+				<ul class="text-ul">
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Midnight Black</h3>
+						<p class="text-ul__p">Elegant, versatile, timeless.</p>
+					</li>
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Cognac Brown</h3>
+						<p class="text-ul__p">Warm tones that develop a rich patina.</p>
+					</li>
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Forest Green</h3>
+						<p class="text-ul__p">Inspired by nature and understated luxury.</p>
+					</li>
+					<li class="text-ul__item">
+						<h3 class="heading heading_c">Burgundy</h3>
+						<p class="text-ul__p">A bold yet sophisticated statement.</p>
+					</li>
+				</ul>
+				<p>Looking for a specific color? Custom requests are always welcome.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Photo Section with CTA --> 
+
+<div class="main__section photo-section photo-section_a">
+	<div class="container">
+		<div class="photo-cta__content">
+			<div class="photo-cta__cta-block cta-block">
+				<div class="cta-block__btn cta-btn">Request a Custom Piece</div>
+				<div class="cta-block__subline cta-subline">Made to order · Premium leather · Worldwide delivery</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Brand Story --> 
+
+<section class="main__section txt-section">
+	<div class="container">
+		<div class="txt-section__content">
+			<h2 class="txt-section__h2 heading heading_b">The Art of Slow Craftsmanship</h2>
+			<p class="txt-section__p">Chat Noir Atelier was created from a simple belief: exceptional products deserve time, skill, and care. In a world of fast production and disposable goods, we choose a different path. Every piece is made with intention, combining traditional leatherworking techniques with distinctive contemporary design.</p>
+			<p class="txt-section__p">Our creations are inspired by the elegance, independence, and character of cats—qualities we believe should be reflected in the objects we carry every day.</p>
+		</div>
+	</div>
+</section>
+
+<!-- Testimonials -->
+
+<section class="main__section tsml">
+	<div class="container">
+		<ul class="tsml__content">
+			<li class="tsml__item">
+				<img class="tsml__img" src="{{ 'tsml-01.png' | asset_url }}" width="2048" height="2048" alt="Cognac leather Bastet backpack beside a woman at an outdoor café">
+			</li>
+			<li class="tsml__item">
+				<p class="tsml__txt">The quality exceeded my expectations. The leather feels incredible, and the craftsmanship is outstanding.</p>
+				<p class="tsml__author">Emma R.</p>
+			</li>
+			<li class="tsml__item">
+				<img class="tsml__img" src="{{ 'tsml-02.png' | asset_url }}" width="2048" height="2048" alt="Woman wearing a burgundy leather Bastet backpack on a cobblestone street">
+			</li>
+			<li class="tsml__item">
+				<p class="tsml__txt">I love that my backpack was made specifically for me. The custom embossing made it truly special.</p>
+				<p class="tsml__author">Sophie M.</p>
+			</li>
+			<li class="tsml__item">
+				<img class="tsml__img" src="{{ 'tsml-03.png' | asset_url }}" width="2048" height="2048" alt="Woman browsing books while wearing a forest green leather Bastet backpack">
+			</li>
+			<li class="tsml__item">
+				<p class="tsml__txt">Beautiful design, premium materials, and attention to every detail.</p>
+				<p class="tsml__author">Marie D.</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- FAQ --> 
+
+<section class="main__section faq">
+	<div class="container">
+		<div class="faq__content">
+			<h2 class="faq__h2 heading heading_b">Got Questions?</h2>
+			<ul class="faq__ul faq-list">
+				<li class="li faq-list__item faq-list__item_opened">
+					<div class="faq-list__question">
+						<h3 class="faq-list__h3 heading heading_c">How long does production take?</h3>
+						<div class="faq-list__icon">
+							{% render 'icon', icon: 'plus' %}
+						</div>
+					</div>
+					<div class="faq-list__answer">
+						<p class="faq-list__p">Most custom pieces are completed within 2–4 weeks depending on the level of personalization.</p>
+					</div>
+				</li>
+				<li class="li faq-list__item">
+					<div class="faq-list__question">
+						<h3 class="faq-list__h3 heading heading_c">What type of leather do you use?</h3>
+						<div class="faq-list__icon">
+							{% render 'icon', icon: 'plus' %}
+						</div>
+					</div>
+					<div class="faq-list__answer">
+						<p class="faq-list__p">We use premium full-grain leather selected for durability, character, and long-term aging qualities.</p>
+					</div>
+				</li>
+				<li class="li faq-list__item">
+					<div class="faq-list__question">
+						<h3 class="faq-list__h3 heading heading_c">Can I request a custom color?</h3>
+						<div class="faq-list__icon">
+							{% render 'icon', icon: 'plus' %}
+						</div>
+					</div>
+					<div class="faq-list__answer">
+						<p class="faq-list__p">Yes. We offer several standard colors and can accommodate many custom requests.</p>
+					</div>
+				</li>
+				<li class="li faq-list__item">
+					<div class="faq-list__question">
+						<h3 class="faq-list__h3 heading heading_c">Do you offer personalization?</h3>
+						<div class="faq-list__icon">
+							{% render 'icon', icon: 'plus' %}
+						</div>
+					</div>
+					<div class="faq-list__answer">
+						<p class="faq-list__p">Absolutely. Initials, names, dates, and custom embossing options are available.</p>
+					</div>
+				</li>
+				<li class="li faq-list__item">
+					<div class="faq-list__question">
+						<h3 class="faq-list__h3 heading heading_c">Do you ship internationally?</h3>
+						<div class="faq-list__icon">
+							{% render 'icon', icon: 'plus' %}
+						</div>
+					</div>
+					<div class="faq-list__answer">
+						<p class="faq-list__p">Yes, worldwide shipping is available.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Photo Section -->
+
+<div class="main__section photo-section photo-section_b"></div>
+
+<!-- Enclosing CTA -->
+
+<section class="main__section txt-section">
+	<div class="container">
+		<div class="txt-section__content">
+			<h2 class="txt-section__h2 heading heading_b">Create Your Own Signature Piece</h2>
+			<p class="txt-section__p">Every Chat Noir Atelier backpack is crafted specifically for its future owner. Choose your leather, personalize the details, and create a piece that is uniquely yours.</p>
+			<div class="txt-section__cta-block cta-block">
+				<div class="cta-block__btn cta-btn">Request Your Custom Backpack</div>
+				<div class="cta-block__subline cta-subline">Handcrafted. Personalized. Made to last.</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 {% schema %}
 {
