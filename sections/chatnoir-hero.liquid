@@ -1,0 +1,101 @@
+{% style %}
+	#shopify-section-{{ section.id }} {
+	  {% if section.settings.bg_image %}
+	    --hero-bg-image: url({{ section.settings.bg_image | image_url: width: 1920 }});
+	  {% else %}
+	    --hero-bg-image: url({{ 'hero-bg-img.jpg' | asset_url }});
+	  {% endif %}
+
+	  {% if section.settings.bg_image_mobile %}
+	    --hero-bg-mobile: url({{ section.settings.bg_image_mobile | image_url: width: 900 }});
+	  {% else %}
+	    --hero-bg-mobile: url({{ 'hero-bg-mobile.jpg' | asset_url }});
+	  {% endif %}
+	}
+{% endstyle %}
+
+<div class="container">
+	<div class="hero__content">
+		<div class="hero__head">
+			<div class="overline">{{ section.settings.overline }}</div>
+			<h1 class="heading heading_a">{{ section.settings.heading }}</h1>
+		</div>
+		<div class="hero__subhead">{{ section.settings.subhead }}</div>
+		{% render 'cta-block', 
+			cta_text: section.settings.cta_text,
+			cta_subline: section.settings.cta_subline,
+			cta_url: section.settings.cta_url
+		%}
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name": "Hero Section",
+		"tag": "section",
+		"class": "main__section hero",
+		"limit": 1,
+		"settings": [
+			{
+			"type": "header",
+			"content": "Content"
+			},
+			{
+				"type": "text",
+				"id": "overline",
+				"label": "Overline",
+				"default": "HANDCRAFTED LEATHER GOODS"
+			},
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading",
+				"default": "Inspired by the Elegance of Cats"
+			},
+			{
+				"type": "textarea",
+				"id": "subhead",
+				"label": "Subheading",
+				"default": "A statement backpack handcrafted from premium full-grain leather. Designed for those who appreciate individuality, craftsmanship, and timeless style."
+			},
+			{
+				"type": "header",
+				"content": "Background images"
+			},
+			{
+				"type": "image_picker",
+				"id": "bg_image",
+				"label": "Background image (desktop)",
+				"info": "Recommended size: 1920×1080px (16:9) or larger. JPG, quality 70–80%, under 500KB."
+
+			},
+			{
+				"type": "image_picker",
+				"id": "bg_image_mobile",
+				"label": "Background image (mobile)",
+				"info": "Recommended size: 900×1200px (3:4 portrait). JPG, quality 70–80%, under 300KB."
+			},
+			{
+				"type": "header",
+				"content": "Call to action"
+			},
+			{
+				"type": "text",
+				"id": "cta_text",
+				"label": "Button text",
+				"default": "Request a Custom Piece"
+			},
+			{
+				"type": "text",
+				"id": "cta_subline",
+				"label": "Button subline",
+				"default": "Made to order · Premium leather · Worldwide delivery"
+			},
+			{
+				"type": "url",
+				"id": "cta_url",
+				"label": "Button link"
+			}
+		]
+	}
+	{% endschema %}

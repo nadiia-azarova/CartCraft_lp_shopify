@@ -1,16 +1,29 @@
 {
 	"layout": "landing",
 	"sections": {
-		"header": {
-			"type": "chatnoir-header"
+		"hero": {
+			"type": "chatnoir-hero"
 		},
-		"main": {
-			"type": "chatnoir-main",
+		"bastet-backpack": {
+			"type": "chatnoir-double",
+			"settings": {
+				"alt_txt": "Woman wearing a handcrafted cognac leather cat backpack",
+				"heading_b": "The Bastet Backpack",
+				"text_content": "More than an accessory, The Bastet Backpack is a celebration of personality and craftsmanship. Inspired by the graceful silhouette of a cat, each piece is handcrafted using carefully selected full-grain leather and finished by handBuilt to accompany you for years, it develops a unique patina that tells your story with every journey."
+			}
+		},
+		"craft": {
+			"type": "chatnoir-double",
+			"settings": {
+				"alt_txt": "Woman wearing a handcrafted cognac leather cat backpack",
+				"heading_b": "The Bastet Backpack",
+				"text_content": "More than an accessory, The Bastet Backpack is a celebration of personality and craftsmanship. Inspired by the graceful silhouette of a cat, each piece is handcrafted using carefully selected full-grain leather and finished by handBuilt to accompany you for years, it develops a unique patina that tells your story with every journey."
+			}
+		},
+		"features": {
+			"type": "chatnoir-features",
 			"settings": {}
-		},
-		"footer": {
-			"type": "chatnoir-footer"
 		}
 	},
-	"order": ["header", "main", "footer"]
+	"order": ["hero", "bastet-backpack", "craft", "features"]
 }

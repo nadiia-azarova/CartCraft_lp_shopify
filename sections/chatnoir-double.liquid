@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="double-col__content">
+		<div class="double-col__col square square_img">
+			<img class="square__img" src="{{ section.settings.section_image | asset_url }}" width="2048" height="2048" alt="{{ section.settings.alt_txt }}">
+		</div>
+		<div class="double-col__col square square_txt">
+			<h2 class="square__heading heading heading_b">{{ section.settings.heading_b }}</h2>
+			{{ section.settings.text_content | newline_to_br }}
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+	{
+		"name": "Text & Image Section",
+		"tag": "section",
+		"class": "main__section double-col",   
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "section_image",
+				"label": "Section Image",
+				"info": "Recommended size: 2048×2048px (1:1). JPG, quality 70–80%, under 500KB." 
+			},
+			{
+				"type": "text",
+				"id": "alt_txt",
+				"label": "Alt Text"
+			},
+			{
+				"type": "header",
+				"content": "Text Block"
+			},
+			{
+				"type": "text",
+				"id": "heading_b",
+				"label": "Section Heading"
+			},
+			{
+				"type": "textarea",
+				"id": "text_content",
+				"label": "Text Content"
+			}
+		]
+	}
+{% endschema %}

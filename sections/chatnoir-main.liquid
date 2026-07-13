@@ -4,7 +4,6 @@
 		--hero-bg-mobile: url({{ 'hero-bg-mobile.jpg' | asset_url }});
 		--icon-star: url({{ 'icon-star.svg' |  asset_url }});
 		--features-bg: url({{ 'features-bg.png' |  asset_url }});
-		--features-vertical-bg: url({{ 'features-vertical.png' |  asset_url }});
 		--photo-cta: url({{ 'photo-cta-bg.png' |  asset_url }});
 	}
   
@@ -20,10 +19,11 @@
 				<h1 class="heading heading_a">Inspired by the Elegance of Cats</h1>
 			</div>
 			<div class="hero__subhead">A statement backpack handcrafted from premium full-grain leather. Designed for those who appreciate individuality, craftsmanship, and timeless style.</div>
-			<div class="cta-block">
-				<div class="cta-block__btn cta-btn">Request a Custom Piece</div>
-				<div class="cta-block__subline cta-subline">Made to order · Premium leather · Worldwide delivery</div>
-			</div>
+			{% render 'cta-block', 
+				cta_text: 'Request a Custom Piece',
+				cta_subline: 'Made to order · Premium leather · Worldwide delivery',
+				cta_url: '#'
+			%}
 		</div>
 	</div>
 </section>
@@ -60,8 +60,8 @@
 			</div>
 		</div>
 	</div>
-</section>
-
+</section>  
+  
 <!-- Features Section -->
 
 <section class="main__section features">
@@ -166,10 +166,11 @@
 <div class="main__section photo-section photo-section_a">
 	<div class="container">
 		<div class="photo-cta__content">
-			<div class="photo-cta__cta-block cta-block">
-				<div class="cta-block__btn cta-btn">Request a Custom Piece</div>
-				<div class="cta-block__subline cta-subline">Made to order · Premium leather · Worldwide delivery</div>
-			</div>
+			{% render 'cta-block', 
+				cta_text: 'Request a Custom Piece',
+				cta_subline: 'Made to order · Premium leather · Worldwide delivery',
+				cta_url: '#'
+			%}
 		</div>
 	</div>
 </div>
@@ -192,25 +193,31 @@
 	<div class="container">
 		<ul class="tsml__content">
 			<li class="tsml__item">
-				<img class="tsml__img" src="{{ 'tsml-01.png' | asset_url }}" width="2048" height="2048" alt="Cognac leather Bastet backpack beside a woman at an outdoor café">
+				<div class="tsml__square tsml__square_img">
+					<img class="tsml__img" src="{{ 'tsml-01.png' | asset_url }}" width="2048" height="2048" alt="Cognac leather Bastet backpack beside a woman at an outdoor café">
+				</div>
+				<div class="tsml__square tsml__square_txt">
+					<p class="tsml__txt">The quality exceeded my expectations. The leather feels incredible, and the craftsmanship is outstanding.</p>
+					<p class="tsml__author">Emma R.</p>
+				</div>
 			</li>
 			<li class="tsml__item">
-				<p class="tsml__txt">The quality exceeded my expectations. The leather feels incredible, and the craftsmanship is outstanding.</p>
-				<p class="tsml__author">Emma R.</p>
+				<div class="tsml__square tsml__square_img">
+					<img class="tsml__img" src="{{ 'tsml-02.png' | asset_url }}" width="2048" height="2048" alt="Woman wearing a burgundy leather Bastet backpack on a cobblestone street">
+				</div>
+				<div class="tsml__square tsml__square_txt">
+					<p class="tsml__txt">I love that my backpack was made specifically for me. The custom embossing made it truly special.</p>
+					<p class="tsml__author">Sophie M.</p>
+				</div>
 			</li>
 			<li class="tsml__item">
-				<img class="tsml__img" src="{{ 'tsml-02.png' | asset_url }}" width="2048" height="2048" alt="Woman wearing a burgundy leather Bastet backpack on a cobblestone street">
-			</li>
-			<li class="tsml__item">
-				<p class="tsml__txt">I love that my backpack was made specifically for me. The custom embossing made it truly special.</p>
-				<p class="tsml__author">Sophie M.</p>
-			</li>
-			<li class="tsml__item">
-				<img class="tsml__img" src="{{ 'tsml-03.png' | asset_url }}" width="2048" height="2048" alt="Woman browsing books while wearing a forest green leather Bastet backpack">
-			</li>
-			<li class="tsml__item">
-				<p class="tsml__txt">Beautiful design, premium materials, and attention to every detail.</p>
-				<p class="tsml__author">Marie D.</p>
+				<div class="tsml__square tsml__square_img">
+					<img class="tsml__img" src="{{ 'tsml-03.png' | asset_url }}" width="2048" height="2048" alt="Woman browsing books while wearing a forest green leather Bastet backpack">
+				</div>
+				<div class="tsml__square tsml__square_txt">
+					<p class="tsml__txt">Beautiful design, premium materials, and attention to every detail.</p>
+					<p class="tsml__author">Marie D.</p>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -223,7 +230,7 @@
 		<div class="faq__content">
 			<h2 class="faq__h2 heading heading_b">Got Questions?</h2>
 			<ul class="faq__ul faq-list">
-				<li class="li faq-list__item faq-list__item_opened">
+				<li class="faq-list__item faq-list__item_opened">
 					<div class="faq-list__question">
 						<h3 class="faq-list__h3 heading heading_c">How long does production take?</h3>
 						<div class="faq-list__icon">
@@ -234,7 +241,7 @@
 						<p class="faq-list__p">Most custom pieces are completed within 2–4 weeks depending on the level of personalization.</p>
 					</div>
 				</li>
-				<li class="li faq-list__item">
+				<li class="faq-list__item">
 					<div class="faq-list__question">
 						<h3 class="faq-list__h3 heading heading_c">What type of leather do you use?</h3>
 						<div class="faq-list__icon">
@@ -245,7 +252,7 @@
 						<p class="faq-list__p">We use premium full-grain leather selected for durability, character, and long-term aging qualities.</p>
 					</div>
 				</li>
-				<li class="li faq-list__item">
+				<li class="faq-list__item">
 					<div class="faq-list__question">
 						<h3 class="faq-list__h3 heading heading_c">Can I request a custom color?</h3>
 						<div class="faq-list__icon">
@@ -256,7 +263,7 @@
 						<p class="faq-list__p">Yes. We offer several standard colors and can accommodate many custom requests.</p>
 					</div>
 				</li>
-				<li class="li faq-list__item">
+				<li class="faq-list__item">
 					<div class="faq-list__question">
 						<h3 class="faq-list__h3 heading heading_c">Do you offer personalization?</h3>
 						<div class="faq-list__icon">
@@ -267,7 +274,7 @@
 						<p class="faq-list__p">Absolutely. Initials, names, dates, and custom embossing options are available.</p>
 					</div>
 				</li>
-				<li class="li faq-list__item">
+				<li class="faq-list__item">
 					<div class="faq-list__question">
 						<h3 class="faq-list__h3 heading heading_c">Do you ship internationally?</h3>
 						<div class="faq-list__icon">
@@ -294,10 +301,11 @@
 		<div class="txt-section__content">
 			<h2 class="txt-section__h2 heading heading_b">Create Your Own Signature Piece</h2>
 			<p class="txt-section__p">Every Chat Noir Atelier backpack is crafted specifically for its future owner. Choose your leather, personalize the details, and create a piece that is uniquely yours.</p>
-			<div class="txt-section__cta-block cta-block">
-				<div class="cta-block__btn cta-btn">Request Your Custom Backpack</div>
-				<div class="cta-block__subline cta-subline">Handcrafted. Personalized. Made to last.</div>
-			</div>
+			{% render 'cta-block', 
+				cta_text: 'Request Your Custom Backpack',
+				cta_subline: 'Handcrafted. Personalized. Made to last.',
+				cta_url: '#'
+			%}
 		</div>
 	</div>
 </section>

@@ -8,28 +8,28 @@
 				<div class="footer-info__text">Handcrafted leather goods inspired by elegance, individuality, and timeless craftsmanship.</div>
 			</div>
 			<div class="footer__social">
-				<ul class="social-btn">
-					<li class="social-btn__item">
-						<a href="#" class="social-btn__link">
-							{% render 'icon', icon: 'instagram' %}
-						</a>
-					</li>
-					<li class="social-btn__item">
-						<a href="#" class="social-btn__link">
-							{% render 'icon', icon: 'facebook' %}
-						</a>
-					</li>
-					<li class="social-btn__item">
-						<a href="#" class="social-btn__link">
-							{% render 'icon', icon: 'pinterest' %}
-						</a>
-					</li>
-				</ul>
+				<div class="social-btn-list">
+					{% render 'socila-btn', 
+						social_url: '#',
+						social_icon: 'instagram',
+						social_id: 'social_instagram'
+					%}
+					{% render 'socila-btn', 
+						social_url: '#',
+						social_icon: 'facebook',
+						social_id: 'social_facebook'
+					%}
+					{% render 'socila-btn', 
+						social_url: '#',
+						social_icon: 'pinterest',
+						social_id: 'social_pinterest'
+					%}
+				</div>
 			</div>
 		</div>
 		<div class="footer-row">
 			<div class="footer__copyright">
-				© 2026 Chat Noir Atelier. All rights reserved.
+				© {{ 'now' | date: '%Y' }} Chat Noir Atelier. All rights reserved.
 			</div>
 		</div>
 	</div>

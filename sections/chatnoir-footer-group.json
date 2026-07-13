@@ -1,0 +1,10 @@
+{
+	"type": "footer",
+	"name": "Chat Noir Footer Group",
+	"sections": {
+		"footer": {
+			"type": "chatnoir-footer"
+		}
+	},
+	"order": ["footer"]
+}

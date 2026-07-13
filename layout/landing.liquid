@@ -1,4 +1,9 @@
-{% assign is_chatnoir = template.suffix == 'landing-chatnoir' %}
+{% if template.suffix == 'landing-chatnoir' %}
+	{% assign is_chatnoir = true %}
+{% else %}
+	{% assign is_chatnoir = false %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ request.locale.iso_code }}">
   <head>
@@ -19,11 +24,29 @@
 	{{ (template.suffix | prepend: 'vars-') | append: '.css' | asset_url | stylesheet_tag }}
 	{{ template.suffix | append: '.css' | asset_url | stylesheet_tag }}
 	
-    
+    {% case template.suffix %}
+		{% when 'landing-chatnoir' %}
+			{% render 'font-face' %}
+		{% else %}
+			
+	{% endcase %}
   </head>
 
   <body class="{{ template.suffix }}">
-    {{ content_for_layout }}
+	{% case template.suffix %}
+		{%  when 'landing-chatnoir' %}
+			{% sections 'chatnoir-header-group' %}
+	{% endcase %}
+	
+
+	<main class="main">
+		{{ content_for_layout }}
+	</main>
+
+	{% case template.suffix %}
+		{%  when 'landing-chatnoir' %}
+			{% sections 'chatnoir-footer-group' %}
+	{% endcase %}
 	
 	<!-- Icon Sprite-->
 	{% if is_chatnoir %}
