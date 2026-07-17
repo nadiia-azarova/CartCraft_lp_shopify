@@ -1,3 +1,13 @@
+{% style %}
+	#shopify-section-{{ section.id }} {
+	  {% if section.settings.bg_image %}
+	    --features-bg: url({{ section.settings.bg_image | image_url: width: 1920 }});
+	  {% else %}
+	  --features-bg: url({{ 'features-bg.png' | asset_url }});
+	  {% endif %}
+	}
+{% endstyle %}
+
 <div class="container">
 	<div class="features__content">
 		<h2 class="features__h2 heading heading_b">{{ section.settings.heading }}</h2>
@@ -28,6 +38,12 @@
 		"class": "main__section features",
 		"limit": 1,
 		"settings": [
+			{
+				"type": "image_picker",
+				"id": "bg_image",
+				"label": "Background Image",
+				"info": "Recommended size: 1920×1080px (16:9) or larger. JPG, quality 70–80%, under 500KB."
+			},
 			{
 				"type": "text",
 				"id": "heading",
