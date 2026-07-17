@@ -1,0 +1,25 @@
+<ul class="text-ul" {{ block.shopify_attributes }}>
+	{% content_for 'blocks' %}
+</ul>
+
+{% schema %}
+	{
+		"name": "Bulleted List",
+		"tag": null,
+		"blocks": [
+			{
+				"type": "chatnoir-ul-list-item"
+			}
+		],
+		"presets": [
+			{
+				"name": "Bulleted List",
+				"blocks": [
+					{"type": "chatnoir-ul-list-item"},
+					{"type": "chatnoir-ul-list-item"},
+					{"type": "chatnoir-ul-list-item"}
+				]
+			}
+		]
+	}
+{% endschema %}

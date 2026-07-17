@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="txt-section__content">
+		{% content_for 'blocks' %}
+	</div>
+</div>
+
+
+{% schema  %}
+	{
+		"name": "Text Section",
+		"tag": "section",
+		"class": "main__section txt-section",
+		"blocks": [
+			{ 
+				"type": "@theme"
+			}
+		],
+		"presets": [
+			{
+				"name": "Text Section",
+				"blocks": [
+					{
+						"type": "chatnoir-section-heading",
+						"settings": {
+							"section_heading": "Section Heading Goes Here"
+						}
+					},
+					{
+						"type": "chatnoir-text-block",
+						"settings": {
+							"text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel nibh quis turpis aliquet elementum id eu est. Sed id accumsan mauris, a vulputate orci. Sed arcu nisi, rutrum ac egestas sed, accumsan eleifend orci."
+						}
+					},
+					{
+						"type": "chatnoir-cta-block",
+						"settings": {
+							"cta_text": "Button Text",
+							"cta_url": "#",
+							"show_subline": true,
+							"cta_subline": "Text Under Button Goes Here"
+						}
+					}
+				]
+			}
+		]
+	}
+{% endschema %}

@@ -4,8 +4,8 @@
 		<ul class="features__list">
 			{% for block in section.blocks %} 
 				<li class="features__item">
-					<h3 class="features__heading heading heading_c">{{ block.settings.feature_heading }}</h3>
-					<p class="features__txt">{{ block.settings.feature_text }}</p>
+					<h3 class="features__heading heading heading_c">{{ block.settings.slide_heading }}</h3>
+					<p class="features__txt">{{ block.settings.slide_text }}</p>
 				</li>
 			{% endfor %}
 			
@@ -37,9 +37,9 @@
 		],
 		"blocks": [
 			{
-				"type": "feature",
-				"name": "Product Feature",
-				"limit": 6,
+				"type": "carousel_slide",
+				"name": "Carousel Slide",
+				"limit": 5,
 				"settings": [
 					{
 						"type": "header",
@@ -47,40 +47,30 @@
 					},
 					{
 						"type": "text",
-						"id": "feature_heading",
-						"label": "Feature Heading"
+						"id": "slide_heading",
+						"label": "Slide Heading"
 					},
 					{
 						"type": "textarea",
-						"id": "feature_text",
-						"label": "Feature Text"
+						"id": "slide_text",
+						"label": "Slide Text"
 					}
 				]
 			}
 		],
+		"max_blocks": 6,
 		"presets": [
 			{
 				"name": "Product Feature Carousel",
+				"settings": {
+					"heading": "Carousel Heading"
+				},
 				"blocks": [
 					{
-						"type": "feature",
+						"type": "carousel_slide",
 						"settings": {
-							"feature_heading": "Premium Full-Grain Leather",
-							"feature_text": "Carefully selected for its rich texture, natural character, and exceptional durability that only improves with age."
-						}
-					},
-					{
-						"type": "feature",
-						"settings": {
-							"feature_heading": "Handcrafted Construction",
-							"feature_text": "Each backpack is individually assembled and finished by hand using traditional leatherworking techniques."
-						}
-					},
-					{
-						"type": "feature",
-						"settings": {
-							"feature_heading": "Made for You",
-							"feature_text": "Crafted to order and personalized to your preferences, creating a piece that is uniquely yours."
+							"slide_heading": "Slide Heading",
+							"slide_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non arcu vitae nibh laoreet vestibulum nec eget urna."
 						}
 					}
 				]

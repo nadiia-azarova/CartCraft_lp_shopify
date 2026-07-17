@@ -1,0 +1,23 @@
+<h2 class="heading heading_b" {{ block.shopify_attributes }}>{{ block.settings.section_heading }}</h2>
+
+{% schema %}
+{
+	"name": "Section Heading",
+	"tag": null,
+	"settings": [
+		{
+			"type": "text",
+			"id": "section_heading",
+			"label": "Section Heading"
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Heading",
+			"settings": {
+				"section_heading": "Section Heading Goes Here"
+			}
+		}
+	]
+}
+{% endschema %}

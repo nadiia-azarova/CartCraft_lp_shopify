@@ -360,7 +360,7 @@
 		margin-bottom: 72px;
 	}
 
-	.double-col + .double-col .double-col__content {
+	.double-col__content_right {
 		flex-direction: row-reverse;
 	}
 
@@ -582,13 +582,13 @@
 			align-items: center;
 		}
 
-		.txt-section__h2,
-		.txt-section__p {
+		& .heading.heading_b,
+		& p {
 			max-width: var(--max-width);
 			text-align: center;
 		}
 
-		.txt-section__cta-block {
+		& .cta-block {
 			text-align: center;
 			margin-top: 48px;
 		}

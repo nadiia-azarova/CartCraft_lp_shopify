@@ -21,11 +21,7 @@
 			<h1 class="heading heading_a">{{ section.settings.heading }}</h1>
 		</div>
 		<div class="hero__subhead">{{ section.settings.subhead }}</div>
-		{% render 'cta-block', 
-			cta_text: section.settings.cta_text,
-			cta_subline: section.settings.cta_subline,
-			cta_url: section.settings.cta_url
-		%}
+		{% content_for "blocks" %}
 	</div>
 </div>
 
@@ -37,26 +33,23 @@
 		"limit": 1,
 		"settings": [
 			{
-			"type": "header",
-			"content": "Content"
+				"type": "header",
+				"content": "Text Content"
 			},
 			{
 				"type": "text",
 				"id": "overline",
-				"label": "Overline",
-				"default": "HANDCRAFTED LEATHER GOODS"
+				"label": "Overline"
 			},
 			{
 				"type": "text",
 				"id": "heading",
-				"label": "Heading",
-				"default": "Inspired by the Elegance of Cats"
+				"label": "Heading"
 			},
 			{
 				"type": "textarea",
 				"id": "subhead",
-				"label": "Subheading",
-				"default": "A statement backpack handcrafted from premium full-grain leather. Designed for those who appreciate individuality, craftsmanship, and timeless style."
+				"label": "Subheading"
 			},
 			{
 				"type": "header",
@@ -74,27 +67,33 @@
 				"id": "bg_image_mobile",
 				"label": "Background image (mobile)",
 				"info": "Recommended size: 900×1200px (3:4 portrait). JPG, quality 70–80%, under 300KB."
-			},
+			}
+		],
+		"blocks": [
+			{	
+				"type": "chatnoir-cta-block"
+			}
+		],
+		"max_blocks": 1,
+		"presets": [
 			{
-				"type": "header",
-				"content": "Call to action"
-			},
-			{
-				"type": "text",
-				"id": "cta_text",
-				"label": "Button text",
-				"default": "Request a Custom Piece"
-			},
-			{
-				"type": "text",
-				"id": "cta_subline",
-				"label": "Button subline",
-				"default": "Made to order · Premium leather · Worldwide delivery"
-			},
-			{
-				"type": "url",
-				"id": "cta_url",
-				"label": "Button link"
+				"name": "Hero Section",
+				"settings": {
+					"overline": "Overline test goes Here",
+					"heading": "Lorem ipsum dolor sit amet",
+					"subhead": "Donec hendrerit, augue a tristique efficitur, mi orci dignissim elit, eu convallis nibh nisi nec turpis. Suspendisse vitae augue ac nisi pellentesque porttitor."
+				},
+				"blocks": [
+					{
+						"type": "chatnoir-cta-block",
+						"settings": {
+							"show_subline": true,
+							"cta_url": "#",
+							"cta_text": "Button Text",
+							"cta_subline": "Subline Text Goes Here"
+						}
+					}
+				]
 			}
 		]
 	}

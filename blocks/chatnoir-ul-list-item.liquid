@@ -1,0 +1,48 @@
+{% style %}
+	#shopify-section-{{ section.id }} {
+		--icon-star: url({{ 'icon-star.svg' |  asset_url }});
+	}
+{% endstyle %}
+
+<li class="text-ul__item" {{ block.shopify_attributes }}>
+	{% if block.settings.show_list_item_heading %}
+		<h3 class="heading heading_c">{{ block.settings.list_item_heading }}</h3>
+	{% endif %}
+	<p class="text-ul__p">{{ block.settings.list_item_text }}</p>
+</li>
+
+
+{% schema %} 
+	{
+		"name": "Bulleted List Element",
+		"tag": null,
+		"settings": [
+			{
+				"type": "text",
+				"id": "list_item_text",
+				"label": "List Element Text"
+			},
+			{
+				"type": "text",
+				"id": "list_item_heading",
+				"label": "List Element Heading"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_list_item_heading",
+				"label": "Show List Element Heading",
+				"default": true
+			}
+		],
+		"presets": [
+			{
+				"name": "List Element",
+				"settings": {
+					"show_list_item_heading": true,
+					"list_item_heading": "List Elememnt Heading",
+					"list_item_text": "List Element Text Goes Here"
+				}
+			}
+		]
+	}
+{% endschema %}

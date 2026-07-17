@@ -1,11 +1,10 @@
 <div class="container">
-	<div class="double-col__content">
+	<div class="double-col__content double-col__content_{{ section.settings.image_position }}">
 		<div class="double-col__col square square_img">
 			<img class="square__img" src="{{ section.settings.section_image | asset_url }}" width="2048" height="2048" alt="{{ section.settings.alt_txt }}">
 		</div>
 		<div class="double-col__col square square_txt">
-			<h2 class="square__heading heading heading_b">{{ section.settings.heading_b }}</h2>
-			{{ section.settings.text_content | newline_to_br }}
+			{% content_for 'blocks' %}
 		</div>
 	</div>
 </div>
@@ -18,6 +17,20 @@
 		"class": "main__section double-col",   
 		"settings": [
 			{
+				"type": "header",
+				"content": "Image Settings"
+			},
+			{
+				"type": "select",
+				"id": "image_position",
+				"label": "Image position",
+				"options": [
+					{ "value": "left", "label": "Left" },
+					{ "value": "right", "label": "Right" }
+				],
+				"default": "left"
+			},
+			{
 				"type": "image_picker",
 				"id": "section_image",
 				"label": "Section Image",
@@ -27,20 +40,17 @@
 				"type": "text",
 				"id": "alt_txt",
 				"label": "Alt Text"
+			}
+		],
+		"blocks": [
+			{
+				"type": "chatnoir-section-heading" 
 			},
 			{
-				"type": "header",
-				"content": "Text Block"
+				"type": "chatnoir-ul-list"
 			},
 			{
-				"type": "text",
-				"id": "heading_b",
-				"label": "Section Heading"
-			},
-			{
-				"type": "textarea",
-				"id": "text_content",
-				"label": "Text Content"
+				"type": "chatnoir-text-block"
 			}
 		]
 	}
