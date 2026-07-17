@@ -316,6 +316,7 @@
         "tsml-1": {
           "type": "tsml",
           "settings": {
+            "tsml_img": "shopify://shop_images/tsml-01.png",
             "tsml_img_alt": "Cognac leather Bastet backpack beside a woman at an outdoor café",
             "tsml_body": "The quality exceeded my expectations. The leather feels incredible, and the craftsmanship is outstanding.",
             "tsml_author": "Emma R."
@@ -324,6 +325,7 @@
         "tsml-2": {
           "type": "tsml",
           "settings": {
+            "tsml_img": "shopify://shop_images/tsml-02.png",
             "tsml_img_alt": "Woman wearing a burgundy leather Bastet backpack on a cobblestone street",
             "tsml_body": "I love that my backpack was made specifically for me. The custom embossing made it truly special.",
             "tsml_author": "Sophie M."
@@ -332,6 +334,7 @@
         "tsml-3": {
           "type": "tsml",
           "settings": {
+            "tsml_img": "shopify://shop_images/tsml-03.png",
             "tsml_img_alt": "Woman browsing books while wearing a forest green leather Bastet backpack",
             "tsml_body": "Beautiful design, premium materials, and attention to every detail.",
             "tsml_author": "Marie D."
@@ -397,7 +400,9 @@
     },
     "photo_b": {
       "type": "chatnoir-photo",
-      "settings": {}
+      "settings": {
+        "bg-img": "shopify://shop_images/hero-bg-img.jpg"
+      }
     },
     "end_cta": {
       "type": "chatnoir-text",
