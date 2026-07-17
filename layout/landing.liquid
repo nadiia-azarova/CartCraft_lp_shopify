@@ -1,12 +1,56 @@
+{% if template.suffix == 'landing-chatnoir' %}
+	{% assign is_chatnoir = true %}
+{% else %}
+	{% assign is_chatnoir = false %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
-    {{ content_for_header }}
+
+	{{ content_for_header }}
+
+	<!-- FavIcon -->
+	{% if is_chatnoir %}
+		<link rel="icon" type="image/png" href="{{ 'chatnoir-favicon.png' | asset_url }}">
+	{% else %}
+		<link rel="icon" href="{{ settings.favicon | asset_url }}">
+	{% endif %}
+
+	<!-- Styles & Fonts -->
+	{{ (template.suffix | prepend: 'vars-') | append: '.css' | asset_url | stylesheet_tag }}
+	{{ template.suffix | append: '.css' | asset_url | stylesheet_tag }}
+	
+    {% case template.suffix %}
+		{% when 'landing-chatnoir' %}
+			{% render 'font-face' %}
+		{% else %}
+			
+	{% endcase %}
   </head>
-  <body>
-    {{ content_for_layout }}
+
+  <body class="{{ template.suffix }}">
+	{% case template.suffix %}
+		{%  when 'landing-chatnoir' %}
+			{% sections 'chatnoir-header-group' %}
+	{% endcase %}
+	
+
+	<main class="main">
+		{{ content_for_layout }}
+	</main>
+
+	{% case template.suffix %}
+		{%  when 'landing-chatnoir' %}
+			{% sections 'chatnoir-footer-group' %}
+	{% endcase %}
+	
+	<!-- Icon Sprite-->
+	{% if is_chatnoir %}
+		{% render 'icon-sprite' %}
+	{% endif %}
   </body>
 </html>

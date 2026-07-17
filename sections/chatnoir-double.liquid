@@ -1,0 +1,57 @@
+<div class="container">
+	<div class="double-col__content double-col__content_{{ section.settings.image_position }}">
+		<div class="double-col__col square square_img">
+			<img class="square__img" src="{{ section.settings.section_image | asset_url }}" width="2048" height="2048" alt="{{ section.settings.alt_txt }}">
+		</div>
+		<div class="double-col__col square square_txt">
+			{% content_for 'blocks' %}
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+	{
+		"name": "Text & Image Section",
+		"tag": "section",
+		"class": "main__section double-col",   
+		"settings": [
+			{
+				"type": "header",
+				"content": "Image Settings"
+			},
+			{
+				"type": "select",
+				"id": "image_position",
+				"label": "Image position",
+				"options": [
+					{ "value": "left", "label": "Left" },
+					{ "value": "right", "label": "Right" }
+				],
+				"default": "left"
+			},
+			{
+				"type": "image_picker",
+				"id": "section_image",
+				"label": "Section Image",
+				"info": "Recommended size: 2048×2048px (1:1). JPG, quality 70–80%, under 500KB." 
+			},
+			{
+				"type": "text",
+				"id": "alt_txt",
+				"label": "Alt Text"
+			}
+		],
+		"blocks": [
+			{
+				"type": "chatnoir-section-heading" 
+			},
+			{
+				"type": "chatnoir-ul-list"
+			},
+			{
+				"type": "chatnoir-text-block"
+			}
+		]
+	}
+{% endschema %}

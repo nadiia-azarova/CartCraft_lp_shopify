@@ -1,16 +1,363 @@
 {
 	"layout": "landing",
 	"sections": {
-		"header": {
-			"type": "chatnoir-header"
+		"hero": {
+			"type": "chatnoir-hero",
+			"settings": {
+				"overline": "HANDCRAFTED LEATHER GOODS",
+				"heading": "Inspired by the Elegance of Cats",
+				"subhead": "A statement backpack handcrafted from premium full-grain leather. Designed for those who appreciate individuality, craftsmanship, and timeless style."
+			},
+			"blocks": {
+				"block_1": {
+					"type": "chatnoir-cta-block",
+					"settings": {
+						"cta_text": "Request a Custom Piece",
+						"cta_url": "#",
+						"show_subline": true,
+						"cta_subline": "Made to order · Premium leather · Worldwide delivery"
+					}
+				}
+			},
+			"block_order": ["block_1"]
 		},
-		"main": {
-			"type": "chatnoir-main",
-			"settings": {}
+		"bastet_backpack": {
+			"type": "chatnoir-double",
+			"settings": {
+				"image_position": "left",
+				"alt_txt": "Woman wearing a handcrafted cognac leather cat backpack"
+			},
+			"blocks": {
+				"block_header": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "The Bastet Backpack"
+					}
+				},
+				"block_text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "More than an accessory, The Bastet Backpack is a celebration of personality and craftsmanship. Inspired by the graceful silhouette of a cat, each piece is handcrafted using carefully selected full-grain leather and finished by hand. \nBuilt to accompany you for years, it develops a unique patina that tells your story with every journey."
+					}
+				}
+			},
+			"block_order": ["block_header", "block_text"]
 		},
-		"footer": {
-			"type": "chatnoir-footer"
+		"craft": {
+			"type": "chatnoir-double",
+			"settings": {
+				"image_position": "right",
+				"alt_txt": "Craftsperson hand-cutting full-grain leather for a handcrafted backpack"
+			},
+			"blocks": {
+				"block_header": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "Made by Hand. Made to Last."
+					}
+				},
+				"block_text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "Every Chat Noir Atelier piece is created individually rather than mass-produced \nFrom cutting and shaping the leather to hand-finishing every detail, our process prioritizes quality over speed. We believe true luxury comes from craftsmanship, attention to detail, and products designed to age beautifully."
+					}
+				}
+			},
+			"block_order": ["block_header", "block_text"]
+		},
+		"features": {
+			"type": "chatnoir-features",
+			"settings": {
+				"heading": "Designed for Those Who Appreciate Craft"
+			},
+			"blocks": {
+				"leather": {
+					"type": "carousel_slide",
+					"settings": {
+						"slide_heading": "Premium Full-Grain Leather",
+						"slide_text": "Carefully selected for its rich texture, natural character, and exceptional durability that only improves with age."
+					}
+				},
+				"construction": {
+					"type": "carousel_slide",
+					"settings": {
+						"slide_heading": "Handcrafted Construction",
+						"slide_text": "Each backpack is individually assembled and finished by hand using traditional leatherworking techniques."
+					}
+				},
+				"customization": {
+					"type": "carousel_slide",
+					"settings": {
+						"slide_heading": "Made for You",
+						"slide_text": "Crafted to order and personalized to your preferences, creating a piece that is uniquely yours."
+					}
+				}
+			},
+			"block_order": ["leather", "construction", "customization"]
+		},
+		"customization": {
+			"type": "chatnoir-double",
+			"settings": {
+				"image_position": "left",
+				"alt_txt": "Two handcrafted leather Bastet backpacks with different embossed designs and finishes"
+			},
+			"blocks": {
+				"block_header": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "Made Uniquely Yours"
+					}
+				},
+				"block_text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "Luxury is personal. Customize your backpack to reflect your individual style and story."
+					}
+				},
+				"block_list": {
+					"type": "chatnoir-ul-list",
+					"blocks": {
+						"item_1": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Three Sizes Available",
+								"list_item_text": "Select from Small, Medium, or Large to find the perfect balance of style, comfort, and functionality."
+							}
+						},
+						"item_2": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Personal Embossing",
+								"list_item_text": "Add initials, a meaningful date, or a custom inscription."
+							}
+						},
+						"item_3": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Signature Details",
+								"list_item_text": "Select hardware finishes and finishing touches to create a truly unique piece."
+							}
+						}
+					},
+					"block_order": ["item_1", "item_2", "item_3"]
+				}
+			},
+			"block_order": ["block_header", "block_text", "block_list"]
+		},
+		"color": {
+			"type": "chatnoir-double",
+			"settings": {
+				"image_position": "right",
+				"alt_txt": "Forest green leather cat backpack with adjustable shoulder straps"
+			},
+			"blocks": {
+				"block_header": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "Available in Your Favorite Shade"
+					}
+				},
+				"block_text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "Looking for a specific color? Custom requests are always welcome."
+					}
+				},
+				"block_list": {
+					"type": "chatnoir-ul-list",
+					"blocks": {
+						"item_1": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Midnight Black",
+								"list_item_text": "Elegant, versatile, timeless."
+							}
+						},
+						"item_2": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Cognac Brown",
+								"list_item_text": "Warm tones that develop a rich patina."
+							}
+						},
+						"item_3": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Forest Green",
+								"list_item_text": "Inspired by nature and understated luxury."
+							}
+						},
+						"item_4": {
+							"type": "chatnoir-ul-list-item",
+							"settings": {
+								"show_list_item_heading": true,
+								"list_item_heading": "Burgundy",
+								"list_item_text": "A bold yet sophisticated statement."
+							}
+						}
+					},
+					"block_order": ["item_1", "item_2", "item_3", "item_4"]
+				}
+			},
+			"block_order": ["block_header", "block_list", "block_text"]
+		},
+		"photo_a": {
+			"type": "chatnoir-photo",
+			"blocks": {
+				"block_1": {
+					"type": "chatnoir-cta-block",
+					"settings": {
+						"cta_text": "Request a Custom Piece",
+						"cta_url": "#",
+						"show_subline": true,
+						"cta_subline": "Made to order · Premium leather · Worldwide delivery"
+					}
+				}
+			},
+			"block_order": ["block_1"]
+		},
+		"brand_story": {
+			"type": "chatnoir-text",
+			"blocks": {
+				"heading": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "The Art of Slow Craftsmanship"
+					}
+				},
+				"text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "Chat Noir Atelier was created from a simple belief: exceptional products deserve time, skill, and care. In a world of fast production and disposable goods, we choose a different path. Every piece is made with intention, combining traditional leatherworking techniques with distinctive contemporary design. \nOur creations are inspired by the elegance, independence, and character of cats—qualities we believe should be reflected in the objects we carry every day."
+					}
+				}
+			},
+			"block_order": ["heading", "text"]
+		},
+		"testimonials": {
+			"type": "chatnoir-tsml",
+			"blocks": {
+				"tsml-1": {
+					"type": "tsml",
+					"settings": {
+						"tsml_img_alt": "Cognac leather Bastet backpack beside a woman at an outdoor café",
+						"tsml_body": "The quality exceeded my expectations. The leather feels incredible, and the craftsmanship is outstanding.",
+						"tsml_author": "Emma R."
+					}
+				},
+				"tsml-2": {
+					"type": "tsml",
+					"settings": {
+						"tsml_img_alt": "Woman wearing a burgundy leather Bastet backpack on a cobblestone street",
+						"tsml_body": "I love that my backpack was made specifically for me. The custom embossing made it truly special.",
+						"tsml_author": "Sophie M."
+					}
+				},
+				"tsml-3": {
+					"type": "tsml",
+					"settings": {
+						"tsml_img_alt": "Woman browsing books while wearing a forest green leather Bastet backpack",
+						"tsml_body": "Beautiful design, premium materials, and attention to every detail.",
+						"tsml_author": "Marie D."
+					}
+				}
+			},
+			"block_order": ["tsml-1", "tsml-2", "tsml-3"]
+		},
+		"faq": {
+			"type": "chatnoir-accordion",
+			"settings": {
+				"heading": "Got Questions?"
+			},
+			"blocks": {
+				"qa_1": {
+					"type": "accordion-item",
+					"settings": {
+						"question": "How long does production take?",
+						"answer": "Most custom pieces are completed within 2–4 weeks depending on the level of personalization."
+					}
+				},
+				"qa_2": {
+					"type": "accordion-item",
+					"settings": {
+						"question": "What type of leather do you use?",
+						"answer": "We use premium full-grain leather selected for durability, character, and long-term aging qualities."
+					}
+				},
+				"qa_3": {
+					"type": "accordion-item",
+					"settings": {
+						"question": "Can I request a custom color?",
+						"answer": "Yes. We offer several standard colors and can accommodate many custom requests."
+					}
+				},
+				"qa_4": {
+					"type": "accordion-item",
+					"settings": {
+						"question": "Do you offer personalization?",
+						"answer": "Absolutely. Initials, names, dates, and custom embossing options are available."
+					}
+				},
+				"qa_5": {
+					"type": "accordion-item",
+					"settings": {
+						"question": "Do you ship internationally?",
+						"answer": "Yes, worldwide shipping is available."
+					}
+				}
+			},
+			"block_order": ["qa_1", "qa_2", "qa_3", "qa_4", "qa_5"]
+		},
+		"photo_b": {
+			"type": "chatnoir-photo"
+		},
+		"end_cta": {
+			"type": "chatnoir-text",
+			"blocks": {
+				"heading": {
+					"type": "chatnoir-section-heading",
+					"settings": {
+						"section_heading": "Create Your Own Signature Piece"
+					}
+				},
+				"text": {
+					"type": "chatnoir-text-block",
+					"settings": {
+						"text_paragraph": "Every Chat Noir Atelier backpack is crafted specifically for its future owner. Choose your leather, personalize the details, and create a piece that is uniquely yours."
+					}
+				},
+				"cta": {
+					"type": "chatnoir-cta-block",
+					"settings": {
+						"cta_text": "Request Your Custom Backpack",
+						"cta_url": "#",
+						"show_subline": true,
+						"cta_subline": "Handcrafted. Personalized. Made to last."
+					}
+				}
+			},
+			"block_order": ["heading", "text", "cta"]
 		}
 	},
-	"order": ["header", "main", "footer"]
+
+	"order": [
+		"hero",
+		"bastet_backpack",
+		"craft",
+		"features",
+		"customization",
+		"color",
+		"photo_a",
+		"brand_story",
+		"testimonials",
+		"faq",
+		"photo_b",
+		"end_cta"
+	]
 }

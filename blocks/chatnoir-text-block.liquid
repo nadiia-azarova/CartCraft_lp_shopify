@@ -1,0 +1,30 @@
+{% assign text_with_br = block.settings.text_paragraph | newline_to_br %}
+{% assign paragraphs = text_with_br | split: "<br />" %}
+<div class="text-paragraphs" style="display: contents;" {{ block.shopify_attributes }}>
+	{% for paragraph in paragraphs %}
+	<p>{{ paragraph }}</p>
+	{% endfor %}
+</div>
+
+{% schema %}
+{
+	"name": "Text Paragraphs",
+	"tag": null,
+	"settings": [
+		{
+			"type": "textarea",
+			"id": "text_paragraph",
+			"label": "Paragraph Text",
+			"info": "Press Enter to start a new paragraph"
+		}
+	],
+	"presets": [
+		{
+			"name": "Paragraph Text",
+			"settings": {
+				"text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel nibh quis turpis aliquet elementum id eu est. Sed id accumsan mauris, a vulputate orci. Sed arcu nisi, rutrum ac egestas sed, accumsan eleifend orci."
+			}
+		}
+	]
+}
+{% endschema %}

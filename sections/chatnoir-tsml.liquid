@@ -1,0 +1,71 @@
+<div class="container">
+	<ul class="tsml__content">
+		{% for block in section.blocks %}
+			{% if block.type == "tsml" %}  
+			<li class="tsml__item">
+				<div class="tsml__square tsml__square_img">
+					<img class="tsml__img" src="{{ block.settings.tsml_img |  image_url: width: 2048 }}" width="2048" height="2048" alt="{{ block.settings.tsml_img_alt }}">
+				</div>
+				<div class="tsml__square tsml__square_txt">
+					<p class="tsml__txt">{{ block.settings.tsml_body }}</p>
+					<p class="tsml__author">{{ block.settings.tsml_author }}</p>
+				</div>
+			</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>
+
+{% schema  %}
+	{
+		"name": "Testimonials",
+		"tag": "section",
+		"class": "main__section tsml",
+		"limit": 1,
+		"blocks": [
+			{
+				"type": "tsml",
+				"name": "Testimonial",
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "tsml_img",
+						"label": "Testimonial Image",
+						"info": "dfsdfdsf"
+					},
+					{
+						"type": "text",
+						"id": "tsml_img_alt",
+						"label": "Testimonial Image Alt Text"
+					},
+					{
+						"type": "textarea",
+						"id": "tsml_body",
+						"label": "Testimonial Text"
+					},
+					{
+						"type": "text",
+						"id": "tsml_author",
+						"label": "Testimonial Author's Name"
+					}
+				]
+			}
+		],
+		"max_blocks": 3,
+		"presets": [
+			{
+				"name": "Testimonial",
+				"blocks": [
+					{
+						"type": "tsml",
+						"settings": {
+							"tsml_img_alt": "Image Alt Text",
+							"tsml_body": "Testimonial Body Text Goes Here",
+							"tsml_author": "Jane Doe"
+						}	
+					}
+				]
+			}
+		]
+	}
+{% endschema %}

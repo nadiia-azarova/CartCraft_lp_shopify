@@ -1,0 +1,27 @@
+<div class="main__section photo-section photo-section_a">
+	<div class="container">
+		<div class="photo-cta__content">
+			{% content_for 'blocks' %}
+		</div>
+	</div>
+</div>
+
+{% schema  %}
+	{
+		"name": "Photo section",
+		"tag": "div",
+		"class": "main__section photo-section",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "bg-img",
+				"label": "Background Image"
+			}
+		],
+		"blocks": [
+			{ 
+				"type": "chatnoir-cta-block"
+			}
+		]
+	}
+{% endschema %}

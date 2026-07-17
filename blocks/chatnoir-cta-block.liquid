@@ -1,0 +1,48 @@
+<div class="cta-block" {{ block.shopify_attributes }}>
+	<div class="cta-block__btn cta-btn">
+		<a class="cta-btn__link" href="{{ block.settings.cta_url }}">{{ block.settings.cta_text }}</a>
+	</div>
+	{% if block.settings.show_subline %} 
+		<div class="cta-block__subline cta-subline">{{ block.settings.cta_subline }}</div> 
+	{% endif %}
+	
+</div>
+
+{% schema %}
+{
+	"name": "CTA Block",
+	"settings": [
+		{
+			"type": "text",
+			"id": "cta_text",
+			"label": "Button Text"
+		},
+		{
+			"type": "url",
+			"id": "cta_url",
+			"label": "Button Link"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_subline",
+			"label": "Show Text Under Button"
+		},
+		{
+			"type": "text",
+			"id": "cta_subline",
+			"label": "Text Under Button"
+		}
+	],
+	"presets": [
+		{
+			"name": "CTA Block",
+			"settings": {
+				"cta_text": "Button Text",
+				"cta_url": "#",
+				"show_subline": true,
+				"cta_subline": "Text Under Button Goes Here"
+			}
+		}
+	]
+}
+{% endschema %}

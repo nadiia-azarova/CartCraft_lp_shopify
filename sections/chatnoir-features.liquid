@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="features__content">
+		<h2 class="features__h2 heading heading_b">{{ section.settings.heading }}</h2>
+		<ul class="features__list">
+			{% for block in section.blocks %} 
+				<li class="features__item">
+					<h3 class="features__heading heading heading_c">{{ block.settings.slide_heading }}</h3>
+					<p class="features__txt">{{ block.settings.slide_text }}</p>
+				</li>
+			{% endfor %}
+			
+			
+		</ul>
+		<ul class="features__controls controls-list">
+			{% for block in section.blocks %}
+				<li class="controls-list__item">
+					<div class="controls-list__control"></div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name": "Product Features Carousel",
+		"tag": "section",
+		"class": "main__section features",
+		"limit": 1,
+		"settings": [
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading",
+				"default": "Designed for Those Who Appreciate Craft"
+			}
+		],
+		"blocks": [
+			{
+				"type": "carousel_slide",
+				"name": "Carousel Slide",
+				"limit": 5,
+				"settings": [
+					{
+						"type": "header",
+						"content": "Product Feature Settings"
+					},
+					{
+						"type": "text",
+						"id": "slide_heading",
+						"label": "Slide Heading"
+					},
+					{
+						"type": "textarea",
+						"id": "slide_text",
+						"label": "Slide Text"
+					}
+				]
+			}
+		],
+		"max_blocks": 6,
+		"presets": [
+			{
+				"name": "Product Feature Carousel",
+				"settings": {
+					"heading": "Carousel Heading"
+				},
+				"blocks": [
+					{
+						"type": "carousel_slide",
+						"settings": {
+							"slide_heading": "Slide Heading",
+							"slide_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non arcu vitae nibh laoreet vestibulum nec eget urna."
+						}
+					}
+				]
+			}
+		]
+	}
+{% endschema %}

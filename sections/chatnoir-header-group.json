@@ -1,0 +1,10 @@
+{
+	"type": "header",
+	"name": "Chat Noir Header Group",
+	"sections": {
+		"header": {
+			"type": "chatnoir-header"
+		}
+	},
+	"order": ["header"]
+}
