@@ -282,7 +282,9 @@
       "block_order": [
         "block_1"
       ],
-      "settings": {}
+      "settings": {
+        "bg-img": "shopify://shop_images/photo-cta-bg.png"
+      }
     },
     "brand_story": {
       "type": "chatnoir-text",
