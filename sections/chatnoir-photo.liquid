@@ -1,3 +1,9 @@
+{% style %}
+	#shopify-section-{{ section.id }} {
+		--photo-cta: url({{ section.settings.bg_img |  image_url: width: 1920 }});
+	}
+{% endstyle %}
+
 <div class="main__section photo-section photo-section_a">
 	<div class="container">
 		<div class="photo-cta__content">
@@ -14,8 +20,9 @@
 		"settings": [
 			{
 				"type": "image_picker",
-				"id": "bg-img",
-				"label": "Background Image"
+				"id": "bg_img",
+				"label": "Background Image",
+				"info": "Recommended size: 1920×1080px (16:9) or larger. JPG, quality 70–80%, under 500KB."
 			}
 		],
 		"blocks": [

@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="double-col__content double-col__content_{{ section.settings.image_position }}">
 		<div class="double-col__col square square_img">
-			<img class="square__img" src="{{ section.settings.section_image | asset_url }}" width="2048" height="2048" alt="{{ section.settings.alt_txt }}">
+			<img class="square__img" src="{{ section.settings.section_image | image_url: width: 2048 }}" width="2048" height="2048" alt="{{ section.settings.alt_txt }}">
 		</div>
 		<div class="double-col__col square square_txt">
 			{% content_for 'blocks' %}
