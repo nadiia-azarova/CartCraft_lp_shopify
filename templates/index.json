@@ -8,13 +8,19 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "main": {
-      "type": "hello-world",
-      "settings": {}
-    }
-  },
-  "order": [
-    "main"
-  ]
+	"sections": {
+		"intro": {
+			"type": "cartcraft-intro",
+			"settings": {}
+		},
+		"sort": {
+			"type": "cartcraft-sort",
+			"settings": {}
+		},
+		"main": {
+			"type": "cartcraft-portfolio",
+			"settings": {}
+		}
+	},
+	"order": ["intro", "sort", "main"]
 }

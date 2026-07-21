@@ -1,0 +1,33 @@
+@scope (.cartcraft) {
+	:scope {
+		--grid-gap: 24px;
+		--bg-color: #181818;
+		--txt-color: #ffffff;
+		--txt-hover: #f5f5f5;
+		--accent_1: #f9ca24;
+		--accent_2: #badc58;
+
+		/* Font sizes */
+		--fs-2xl: clamp(32px, calc(27.429px + 1.429vw), 48px); /* 48-32 */
+		--fs-xl: clamp(24px, calc(21.714px + 0.714vw), 32px); /* 32-24 */
+		--fs-lg: clamp(20px, calc(18.857px + 0.357vw), 24px); /* 24-20 */
+		--fs-md: clamp(16px, calc(14.857px + 0.357vw), 20px); /* 20-16 */
+		--fs-sm: clamp(14px, calc(13.429px + 0.179vw), 16px); /* 16-14 */
+		--fs-xs: clamp(12px, calc(11.429px + 0.179vw), 14px); /* 14-12 */
+		--fs-2xs: clamp(10px, calc(9.429px + 0.179vw), 12px) /* 12-10 */;
+
+		/* Paddings & Spacings */
+		--sp-md: clamp(16px, calc(14.857px + 0.357vw), 20px); /* 20-16 */
+
+		/* Transition */
+		--tr-time: 250ms;
+		--tr-func: ease-in-out;
+		--transition: var(--tr-time) var(--tr-func);
+	}
+
+	@media screen and (max-width: 767px) {
+		:scope {
+			--grid-gap: 16px;
+		}
+	}
+}

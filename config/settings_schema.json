@@ -16,9 +16,15 @@
 			},
 			{
 				"type": "font_picker",
-				"id": "type_primary_font",
-				"default": "work_sans_n4",
-				"label": "t:general.primary"
+				"id": "font_heading",
+				"default": "lora_n4",
+				"label": "Heading font"
+			},
+			{
+				"type": "font_picker",
+				"id": "font_body",
+				"default": "poppins_n4",
+				"label": "Body font"
 			}
 		]
 	},

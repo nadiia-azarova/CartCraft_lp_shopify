@@ -21,8 +21,11 @@
 	{% endif %}
 
 	<!-- Styles & Fonts -->
-	{{ (template.suffix | prepend: 'vars-') | append: '.css' | asset_url | stylesheet_tag }}
-	{{ template.suffix | append: '.css' | asset_url | stylesheet_tag }}
+	{% case template.suffix %}
+  		{% when 'chatnoir' %}
+    		{{ 'vars-landing-chatnoir.css' | asset_url | stylesheet_tag }}
+    		{{ 'landing-chatnoir.css' | asset_url | stylesheet_tag }}
+	{% endcase %}
 	
     {% case template.suffix %}
 		{% when 'landing-chatnoir' %}
@@ -32,7 +35,7 @@
 	{% endcase %}
   </head>
 
-  <body class="{{ template.suffix }}">
+  <body class="landing-{{ template.suffix }}">
 	{% case template.suffix %}
 		{%  when 'landing-chatnoir' %}
 			{% sections 'chatnoir-header-group' %}

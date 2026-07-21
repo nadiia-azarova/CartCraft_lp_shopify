@@ -1,0 +1,199 @@
+/**
+	* CartCraft
+	* @description Shopify Projects Portfolio
+	*
+	* @version 1.0.0
+	*
+	* @author Nadiia Azarova
+	* @created 19.07.2026
+	* @updated Дата останнього оновлення
+*/
+
+@scope (.cartcraft) {
+	:scope:where(.cartcraft) {
+		margin: 0;
+		min-height: 100vh;
+		min-height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--bg-color);
+		font-size: var(--fs-md);
+		line-height: 1.5;
+		color: var(--txt-color);
+		text-indent: 0;
+		font-family: var(--font-body);
+	}
+
+	.container {
+		box-sizing: border-box;
+		padding-inline: calc(var(--grid-gap) * 2);
+		container: main-container / inline-size;
+	}
+
+	/*------------------------------------*\
+		#TYPOGRAPHY
+	\*------------------------------------*/
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+		margin: 0;
+	}
+
+	/*------------------------------------*\
+		#GENERAL LAYOUT
+	\*------------------------------------*/
+
+	.main {
+		flex: 1;
+	}
+
+	/*------------------------------------*\
+		#Portfolio Grid
+	\*------------------------------------*/
+
+	.portfolio-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: masonry;
+		gap: var(--grid-gap);
+	}
+
+	.portfolio-item {
+		display: flex;
+		flex-direction: column;
+		gap: calc(var(--grid-gap) / 2);
+	}
+
+	.item-img {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		position: relative;
+		border-radius: 16px;
+
+		.item-img__img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.item-img__overlay {
+			position: absolute;
+			inset: 0;
+		}
+	}
+
+	.item-img_landscape {
+		aspect-ratio: 4/3;
+	}
+
+	.item-img_square {
+		aspect-ratio: 1;
+	}
+
+	.item-img_portrait {
+		aspect-ratio: 3/4;
+	}
+
+	.item-overlay {
+		opacity: 0;
+		transition: opacity var(--transition);
+
+		.item-overlay__link {
+			box-sizing: border-box;
+			padding: var(--sp-md);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to top, rgb(0 0 0 / 0.75) 0%, rgb(0 0 0 / 0) 35%);
+			background-blend-mode: multiply;
+		}
+
+		.item-overlay__info {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			gap: 8px;
+
+			.item-overlay__sale,
+			.item-overlay__cat {
+				box-sizing: border-box;
+				padding-inline: 16px;
+				display: flex;
+				justify-self: center;
+				align-items: center;
+				height: clamp(40px, calc(37.714px + 0.714vw), 48px);
+				border-radius: clamp(20px, calc(18.857px + 0.357vw), 24px);
+				font-size: var(--fs-sm);
+				font-weight: 500;
+			}
+
+			.item-overlay__sale {
+				background: linear-gradient(to right, var(--accent_1), var(--accent_2));
+				color: var(--bg-color);
+			}
+
+			.item-overlay__cat {
+				border: 2px solid var(--txt-color);
+				background-color: rgb(0 0 0 / 0);
+				background-blend-mode: multiply;
+				transition: background-color var(--transition);
+
+				&:hover {
+					background-color: rgb(0 0 0 / 0.35);
+				}
+			}
+		}
+
+		.item-overlay__date {
+			font-size: var(--fs-xs);
+		}
+	}
+
+	.item-desc {
+		.item-desc__link {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	@container main-container (max-width: 928px) and (min-width: 737px) {
+		.portfolio-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@container main-container (max-width: 736px) and (min-width: 541px) {
+		.portfolio-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@container main-container (max-width: 540px) {
+		.portfolio-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}

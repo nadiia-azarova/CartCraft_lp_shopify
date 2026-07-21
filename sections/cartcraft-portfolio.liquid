@@ -1,0 +1,139 @@
+
+<p><a href="https://cartcraft-studio-glxkr0oj.myshopify.com/pages/chat-noir-lp">Chat Noir Landing Page</a></p>
+
+<div class="portfolio-grid">
+	{% for block in section.blocks %}
+		{% if block.type == "portfolio_item" %}
+			
+			{% case block.settings.item_aspect %}
+				{% when "portrait" %}
+					{% assign height = "416" %}
+					{% assign class = "portrait" %}
+				{% when "square" %}
+					{% assign height = "312" %}
+					{% assign class = "square" %}
+				{% when "landscape" %}
+					{% assign height = "234" %}
+					{% assign class = "landscape" %}
+			{% endcase %}
+
+			{% assign cat = block.settings.item_cat %}
+
+			{% case cat %}
+				{% when "lp" %}
+					{% assign cat_name = "Landing" %}
+				{% when "sf" %}
+					{% assign cat_name = "Storefront" %}
+				{% when "th" %}
+					{% assign cat_name = "Theme" %}
+			{% endcase %}
+			
+
+			<div class="portfolio-grid__item portfolio-item portfolio-item_{{ cat | downcase }}">
+				<div class="portfolio-item__img item-img item-img_{{ class }}">
+					<div class="item-img__overlay item-overlay">
+						<a href="{{ block.settings.item_url }}" class="item-overlay__link">
+							<div class="item-overlay__info">
+								{% if block.settings.item_sale %}
+									<div class="item-overlay__sale">For Sale</div>
+								{% endif %}
+								<div class="item-overlay__cat">{{ cat_name |  capitalize }}</div>
+							</div>
+							<div class="item-overlay__date">{{ block.settings.item_date | date: '%b %Y' }}</div>
+						</a>
+					</div>
+
+					<img src="{{ block.settings.item_img |  image_url: width: 312, height: height }}" width="312" height="{{ height }}" alt="{{ block.settings.item_name }}" class="item-img__img">
+				</div>
+				<div class="portfolio-item__desc item-desc">
+					<a href="{{ block.settings.item_url }}" class="item-desc__link">{{ block.settings.item_desc }}</a>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+	
+</div>
+
+
+{% schema %}
+{
+	"name": "Portfolio",
+	"tag": "div",
+	"class": "container",
+	"blocks": [
+		{
+			"type": "portfolio_item",
+			"name": "Work in Portfolio",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "item_img",
+					"label": "Cover Image"
+				},
+				{
+					"type": "radio",
+					"id": "item_aspect",
+					"label": "Image orientation",
+					"options": [
+						{
+							"value": "portrait",
+							"label": "Portrait"
+						},
+						{
+							"value": "square",
+							"label": "Square"
+						},
+						{
+							"value": "landscape",
+							"label": "Landscape"
+						}
+					]
+				},
+				{
+					"type": "textarea",
+					"id": "item_desc",
+					"label": "Work Description"
+				},
+				{
+					"type": "url",
+					"id": "item_url",
+					"label": "Link to Website"
+				},
+				{
+					"type": "text",
+					"id": "item_date",
+					"label": "Creation date",
+  					"info": "Format: YYYY-MM-DD, e.g. Jan 2026"
+				},
+				{
+					"type": "checkbox",
+					"id": "item_sale",
+					"label": "For Sale?"
+				},
+				{
+					"type": "select",
+					"id": "item_cat",
+					"label": "Work Category",
+					"options": [
+						{
+							"value": "lp",
+							"label": "Landings"
+						},
+						{
+							"value": "sf",
+							"label": "Storefronts"
+						},
+						{
+							"value": "th",
+							"label": "Themes"
+						}
+					]  
+				}
+			]
+		}
+	],
+	"presets": [
+		
+	]
+}
+{% endschema %}
