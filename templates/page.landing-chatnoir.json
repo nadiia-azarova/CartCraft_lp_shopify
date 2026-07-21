@@ -86,6 +86,7 @@
       ],
       "settings": {
         "image_position": "right",
+        "section_image": "shopify://shop_images/backpack-02.png",
         "alt_txt": "Craftsperson hand-cutting full-grain leather for a handcrafted backpack"
       }
     },
@@ -186,6 +187,7 @@
       ],
       "settings": {
         "image_position": "left",
+        "section_image": "shopify://shop_images/backpack-03.png",
         "alt_txt": "Two handcrafted leather Bastet backpacks with different embossed designs and finishes"
       }
     },
@@ -262,6 +264,7 @@
       ],
       "settings": {
         "image_position": "right",
+        "section_image": "shopify://shop_images/backpack-04.png",
         "alt_txt": "Forest green leather cat backpack with adjustable shoulder straps"
       }
     },
@@ -283,7 +286,7 @@
         "block_1"
       ],
       "settings": {
-        "bg-img": "shopify://shop_images/photo-cta-bg.png"
+        "bg_img": "shopify://shop_images/photo-cta-bg.png"
       }
     },
     "brand_story": {
@@ -401,7 +404,7 @@
     "photo_b": {
       "type": "chatnoir-photo",
       "settings": {
-        "bg-img": "shopify://shop_images/hero-bg-img.jpg"
+        "bg_img": "shopify://shop_images/hero-bg-img.jpg"
       }
     },
     "end_cta": {
