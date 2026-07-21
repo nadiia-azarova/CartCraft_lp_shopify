@@ -8,19 +8,40 @@
  * ------------------------------------------------------------
  */
 {
-	"sections": {
-		"intro": {
-			"type": "cartcraft-intro",
-			"settings": {}
-		},
-		"sort": {
-			"type": "cartcraft-sort",
-			"settings": {}
-		},
-		"main": {
-			"type": "cartcraft-portfolio",
-			"settings": {}
-		}
-	},
-	"order": ["intro", "sort", "main"]
+  "sections": {
+    "intro": {
+      "type": "cartcraft-intro",
+      "settings": {}
+    },
+    "sort": {
+      "type": "cartcraft-sort",
+      "settings": {}
+    },
+    "main": {
+      "type": "cartcraft-portfolio",
+      "blocks": {
+        "portfolio_item_RJyfQU": {
+          "type": "portfolio_item",
+          "settings": {
+            "item_img": "shopify://shop_images/portfolio-cover_87b750f4-dcf6-4c28-a7f0-b27f1de3e09e.jpg",
+            "item_aspect": "square",
+            "item_desc": "Chat Noir: Premium Leather Cat Backpack Landing Page",
+            "item_url": "shopify://pages/chat-noir-lp",
+            "item_date": "2026-07-21",
+            "item_sale": false,
+            "item_cat": "lp"
+          }
+        }
+      },
+      "block_order": [
+        "portfolio_item_RJyfQU"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "intro",
+    "sort",
+    "main"
+  ]
 }
